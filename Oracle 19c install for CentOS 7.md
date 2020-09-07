@@ -1,4 +1,5 @@
 配置hosts文件
+
 127.0.0.1   localhost
 
 192.168.106.128  oradb
@@ -100,46 +101,8 @@ net.core.wmem_max = 1048576
 
 # sysctl –p
 
- 
-
-安装系统包
-mkdir -p  /media/cdrom
-
-mount /dev/sr0 /media/cdrom
-
-cat > /etc/yum.repos.d/dvd.repo <<END
-
-[dvd]
-
-name=install dvd
-
-baseurl=file:///media/cdrom
-
-enabled=1
-
-gpgcheck=0
-
-END
-
- 
-
-yum install tigervnc-server tigervnc vnc vnc-server
-
-yum -y install compat-libcap1-1.10-7.el7.x86_64.rpm
-
-yum -y install libstdc++-devel-4.8.5-28.el7.x86_64.rpm
-
-yum -y install gcc-c++-4.8.5-28.el7.x86_64.rpm
-
-yum -y install ksh-20120801-137.el7.x86_64.rpm
-
-yum -y install glibc-devel-2.17-222.el7.x86_64.rpm
-
-yum -y install libaio-devel-0.3.109-13.el7.x86_64.rpm
-
-yum -y install compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm 需要下载
-
 编辑profile文件
+
 #vi /etc/profile
 
 # for oracle setting 在文档内加入以下内容
